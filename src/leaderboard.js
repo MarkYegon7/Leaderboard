@@ -1,23 +1,41 @@
+const API_URL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/';
+
 const scores = [];
 
-export function addScore(name, score) {
-  return new Promise((resolve, reject) => {
-    if (!name || Number.isNaN(score)) {
-      reject(new Error('Invalid input'));
-    } else {
-      scores.push({ name, score });
-      resolve();
-    }
+export async function addScore(name, score) {
+  if (!name || Number.isNaN(score)) {
+    throw new Error('Invalid input');
+  }
+
+  const response = await fetch(`${API_URL}games/:GAME_ID/scores/`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ user: name, score }),
   });
+
+  if (!response.ok) {
+    throw new Error('Failed to add score');
+  }
+
+  scores.push({ name, score });
 }
 
-export function displayScores(container) {
+export async function displayScores(container) {
   container.innerHTML = '';
 
-  scores.forEach((scoreObj) => {
-    const { name, score } = scoreObj;
+  const response = await fetch(`${API_URL}games/:GAME_ID/scores/`);
+  if (!response.ok) {
+    throw new Error('Failed to fetch scores');
+  }
+
+  const data = await response.json();
+
+  data.result.forEach((scoreObj) => {
+    const { user, score } = scoreObj;
     const scoreElement = document.createElement('div');
-    scoreElement.textContent = `${name}: ${score}`;
+    scoreElement.textContent = `${user}: ${score}`;
     container.appendChild(scoreElement);
 
     const hr = document.createElement('hr');
