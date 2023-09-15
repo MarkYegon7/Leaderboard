@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.leaderboard-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+h1 {
+  color: black;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  gap: 10px;
+  height: 20%;
+}
+
+/* #nameInput {
+    height: 25%;
+}
+
+#scoreInput {
+    height: 25%;
+} */
+
+#submitButton {
+  width: 36%;
+}
+
+h2 {
+  margin: 10%;
+}
+
+.last-section {
+  margin: -24% 1% 1% 1%;
+}
+
+#last_section-flex {
+  /* display: flex;
+    flex-direction: row; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 7%;
+}
+
+#button-refresh {
+  width: 24%;
+  height: 29px;
+  margin: 10% 1% 1% 1%;
+}
+
+.scores {
+  margin: 3% 2%;
+}
+
+#scoresList {
+  border: 1px solid black;
+  padding: 5% 5% 1% 2%;
+}
