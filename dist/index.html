@@ -4,29 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Leaderboard App</title>
-  <link rel="stylesheet" href="styles.css">
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+  <link rel="stylesheet" href="styles.css" type="text/css">
 <script defer src="runtime.js"></script><script defer src="bundle.js"></script></head>
 <body>
   <section class="leaderboard-container">
     <h1>Leaderboard</h1>
-    <div class="input-container">
-        <h3>Add your score</h3>
-      <input type="text" id="nameInput" placeholder="Name">
-      <input type="number" id="scoreInput" placeholder="Score">
-      <button id="submitButton">Submit</button>
-    </div>
 
-    <div class="last-section">
-        <div id="last_section-flex">
-            <h2>Recent Scores</h2>
-            <button type="button" id="button-refresh">Refresh</button>
-         </div>
-        <div class="scores" id="scoresList">
-        <!-- Scores will be displayed here -->
+    <div class="landing-page">
+        <div class="input-container">
+            <h3>Add your score</h3>
+          <input type="text" id="nameInput" placeholder="Name">
+          <input type="number" id="scoreInput" placeholder="Score">
+          <button id="submitButton">Submit</button>
+        </div>
+
+        <div class="last-section">
+            <div id="last_section-flex">
+                <h2>Recent Scores</h2>
+                <button type="button" id="button-refresh">Refresh</button>
+            </div>
+            <div class="scores" id="scoresList">
+            <!-- Scores will be displayed here -->
+            </div>
         </div>
     </div>
 </section>
-  <script type="module" src="index.js"></script>
+<script type="module" src="index.js"></script>
 
 </body>
 </html>
