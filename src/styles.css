@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
+.landing-page {
+  margin: 0;
+}
+
 .leaderboard-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -7,6 +11,10 @@
 
 h1 {
   color: black;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  padding: 3%;
+  font-size: 27px;
 }
 
 .input-container {
@@ -15,6 +23,7 @@ h1 {
   width: 40%;
   gap: 10px;
   height: 20%;
+  margin: 20% 1% 1% 1%;
 }
 
 /* #nameInput {
@@ -31,10 +40,18 @@ h1 {
 
 h2 {
   margin: 10%;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .last-section {
-  margin: -24% 1% 1% 1%;
+  margin: -35% 1% 1% 1%;
 }
 
 #last_section-flex {
@@ -58,4 +75,5 @@ h2 {
 #scoresList {
   border: 1px solid black;
   padding: 5% 5% 1% 2%;
+  width: 54%;
 }
